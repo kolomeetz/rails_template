@@ -10,7 +10,7 @@ It doesn't define what database to use, that's the responsibility of your `~/.ra
 
 Run `rails new` command with `-m` option and point to location of the template file, like this:
 
-    rails new project_name -m https://github.com/kolomeetz/rails_template/blob/master/template.rb
+    rails new project_name -m https://raw.githubusercontent.com/kolomeetz/rails_template/master/template.rb
 
 ## Added gems
 
