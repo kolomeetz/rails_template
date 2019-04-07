@@ -34,10 +34,14 @@ run 'rm README.md'
 
 after_bundle do
   git :init
-  run 'bundle exec guard init'
-  run 'bundle exec rspec --init'
-  git add: '.'
   git commit: "-a -m 'Initial commit'"
 
+  run 'bundle exec guard init'
+  git commit: "-a -m 'Initialize guard'"
+
+  run 'bundle exec rspec --init'
+  git commit: "-a -m 'Initialize rspec'"
+
   run 'rails g annotate:install'
+  git commit: "-a -m 'Initialize annotate gem'"
 end
