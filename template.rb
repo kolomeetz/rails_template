@@ -38,4 +38,6 @@ after_bundle do
   run 'bundle exec rspec --init'
   git add: '.'
   git commit: "-a -m 'Initial commit'"
+
+  run 'rails g annotate:install'
 end
