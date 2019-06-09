@@ -35,6 +35,7 @@ In development:
 
 ## Plans
 
+- [ ] add factory_bot for fixtures
 - [ ] add Circle CI configuration
 - [ ] add Dockerfile with production-like configuration
 - [ ] add docker-compose for development
