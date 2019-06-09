@@ -51,6 +51,7 @@ In development:
 
 - [x] add `Makefile` with basic dev env commands
 - [x] add factory_bot for fixtures
+- [ ] add `--skip-test` to railsrc
 - [ ] add Circle CI configuration
 - [ ] add Dockerfile with production-like configuration
 - [ ] add docker-compose for development
