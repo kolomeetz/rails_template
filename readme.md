@@ -36,7 +36,7 @@ In development:
 ## Plans
 
 - [x] add `Makefile` with basic dev env commands
-- [ ] add factory_bot for fixtures
+- [x] add factory_bot for fixtures
 - [ ] add Circle CI configuration
 - [ ] add Dockerfile with production-like configuration
 - [ ] add docker-compose for development

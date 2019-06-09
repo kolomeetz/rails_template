@@ -16,6 +16,7 @@ gem_group :development, :test do
   gem 'rspec-rails'
   gem 'rspec'
   gem 'simplecov'
+  gem 'factory_bot_rails'
 end
 
 environment nil, env: 'development' do
