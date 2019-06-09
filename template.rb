@@ -39,9 +39,9 @@ after_bundle do
   run 'bundle exec guard init'
   git commit: "-a -m 'Initialize guard'"
 
-  run 'bundle exec rails g rspec:install'
+  generate 'rspec:install'
   git commit: "-a -m 'Initialize rspec'"
 
-  run 'bundle exec rails g annotate:install'
+  generate 'annotate:install'
   git commit: "-a -m 'Initialize annotate gem'"
 end
