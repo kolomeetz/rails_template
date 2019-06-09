@@ -32,6 +32,21 @@ end
 
 run 'rm README.md'
 
+makefile = <<-EOF
+.PHONY: dev test
+
+dev:
+	overmind start
+
+test:
+	bundle exec rspec
+
+test-watch:
+	bundle exec guard
+EOF
+
+create_file 'Makefile', makefile
+
 after_bundle do
   git :init
   git commit: "-a -m 'Initial commit'"
