@@ -11,6 +11,20 @@ It doesn't define what database to use, that's the responsibility of your `~/.ra
 Run `rails new` command with `-m` option and point to location of the template file, like this:
 
     rails new project_name -m https://raw.githubusercontent.com/kolomeetz/rails_template/master/template.rb
+    
+But even a better idea could be configuring Rails defaults with `~/.railsrc` file with something like that:
+
+```
+--database=postgresql
+--webpack
+--skip-coffee
+--skip-turbolinks
+--template=https://raw.githubusercontent.com/kolomeetz/rails_template/master/template.rb
+```
+
+With this file `rails new` command becomes nice and slick:
+
+    rails new project_name
 
 ## Added gems
 
