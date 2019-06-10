@@ -2,6 +2,11 @@ def read_file(file_name)
   File.read("templates/#{file_name}")
 end
 
+def create_file_from_template(filename)
+  file = read_file(filename)
+  create_file(filename, file)
+end
+
 # Add gems
 gem 'lograge'
 
@@ -12,6 +17,8 @@ gem_group :development do
   gem 'guard'
   gem 'guard-rspec'
   gem 'rubocop'
+  gem 'rubocop-rails'
+  gem 'rubocop-performance'
 end
 
 gem_group :development, :test do
@@ -29,8 +36,10 @@ end
 
 run 'rm README.md'
 
-makefile = read_file('Makefile')
-create_file('Makefile', makefile)
+%w(
+  Makefile
+  .rubocop.yml
+).each(&method(:create_file_from_template))
 
 after_bundle do
   git :init
