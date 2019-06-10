@@ -1,3 +1,7 @@
+def read_file(file_name)
+  File.read("templates/#{file_name}")
+end
+
 # Add gems
 gem 'lograge'
 
@@ -20,33 +24,13 @@ gem_group :development, :test do
 end
 
 environment nil, env: 'development' do
-<<-CODE
-  config.after_initialize do
-    Bullet.enable = true
-    Bullet.rails_logger = true
-  end
-
-  config.active_record.verbose_query_logs = false
-
-CODE
+  read_file 'environment/development.rb'
 end
 
 run 'rm README.md'
 
-makefile = <<-EOF
-.PHONY: dev test
-
-dev:
-	overmind start
-
-test:
-	bundle exec rspec
-
-test-watch:
-	bundle exec guard
-EOF
-
-create_file 'Makefile', makefile
+makefile = read_file('Makefile')
+create_file('Makefile', makefile)
 
 after_bundle do
   git :init
