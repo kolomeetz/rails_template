@@ -30,9 +30,9 @@ gem_group :development, :test do
   gem 'factory_bot_rails'
 end
 
-environment nil, env: 'development' do
-  read_file 'environment/development.rb'
-end
+# environment nil, env: 'development' do
+#  read_file 'environment/development.rb'
+# end
 
 run 'rm README.md'
 
