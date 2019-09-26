@@ -36,11 +36,11 @@ end
 
 run 'rm README.md'
 
-%w(
-  Makefile
-  .rubocop.yml
-  .circleci/config.yml
-).each(&method(:create_file_from_template))
+# %w(
+#  Makefile
+#  .rubocop.yml
+#  .circleci/config.yml
+#).each(&method(:create_file_from_template))
 
 after_bundle do
   git :init
