@@ -14,11 +14,12 @@ gem_group :development do
   gem 'annotate'
   gem 'better_errors'
   gem 'bullet'
-  gem 'guard'
   gem 'guard-rspec'
-  gem 'rubocop'
-  gem 'rubocop-rails'
-  gem 'rubocop-performance'
+  gem 'guard'
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
+  gem 'rubocop', require: false
 end
 
 gem_group :development, :test do
